@@ -20,35 +20,6 @@ $fontFamily: 'Karla', sans-serif;
 
 
 //minxin
-@mixin linkStyle {
-    text-decoration: none;
-    color: $altColor;
-}
-
-@mixin navStyle {
-    padding:0;
-    margin:0;
-    text-decoration: none;
-    list-style-type: none;
-}
-
-@mixin subTitle {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom:0;
-    padding-bottom:0;
-    letter-spacing: 2px;
-    color: $altColor;
-}
-
-@mixin title {
-    font-size: 35px;
-    margin: 15px auto 10px auto;
-    width: 80%;
-    font-weight: 800;
-    color: $primaryColor;
-}
 
 @mixin titleDescription {
     padding:0 30px;
@@ -84,19 +55,55 @@ $fontFamily: 'Karla', sans-serif;
     }
 }
 
-* {
+// typography setting 
+
+h1 {
+    font-size: 35px;
+    font-weight: 800;
+    color: $primaryColor;
+}
+
+.link {
+    text-decoration: none;
+    color: $altColor;
+}
+
+.resetlist {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    margin: 15px auto 10px auto;
+    width: 80%;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    letter-spacing: 2px;
+    color: $altColor;
+}
+
+ // end of typography setting 
+
+*, *::before, *::after {
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 
 body {
     padding:0;
     margin: 0;
-    min-height: 100vh;
+    min-height: 105vh;
+    max-width: 100vw;
     font-family: $fontFamily;
     background-color: $bgColor;
 }
@@ -105,76 +112,59 @@ body {
     margin: 0 auto;
 }
 
+
+// navigation sticky
 .nav {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    position: sticky;
+    width: 100vw;
+    position: fixed;
     z-index: 99999;
     
     &__logo {
         color: $bgColorSecond;
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 800;
     }
 
-    &__list {
-        @include navStyle;
-    }
-
     &__item {
-        @include navStyle;
         display: inline;
         margin: 0 3px;
     }
 
     &__link {
-        @include linkStyle;
         text-transform:uppercase;
         font-size: 14px;
+
+        &:hover {
+            cursor: pointer;
+            color: $bgColorSecond;
+            font-weight: 700;
+            border-bottom: 1px solid $bgColorSecond;
+
+            &::before {
+                content: "> ";
+                font-weight: 700;
+            }
+        }
     }
 }
 
 .start {
-    min-height: 550px;
+    min-height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     background: $bgColor;
     background: linear-gradient(180deg, rgba(227,238,248,1) 0%, rgba(255,255,255,1) 100%);
 
-    @media screen and (min-height:600px) {
-        min-height: 625px;
-    }
-
-    @media screen and (min-height: 700px) {
-        min-height: 770px;
-    }
-
-    @media screen and (min-height: 900px) {
-        min-height: 1000px;
-    }
-
-    @media screen and (min-height: 1200px) {
-        min-height: 1350px;
-    }
-
-
-
     &__header {
         display: flex;
         flex-flow: column wrap;
         align-content: center;
         text-align: center;
-    }
-
-    &__subtitle {
-        @include subTitle;
-    }
-
-    &__title {
-        @include title;
     }
 
     &__description {
@@ -219,12 +209,10 @@ body {
     }
 
     &__subtitle {
-        @include subTitle;
         color: $secondColor;
     }
 
     &__title {
-        @include title;
         color: $bgColor;
         
     }
@@ -256,7 +244,12 @@ body {
 
     &__header {
         grid-area: 1 / 1 / 2 / 3;
-        @include subTitle;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        letter-spacing: 2px;
         color: $secondColor;
     }
 
@@ -283,12 +276,7 @@ body {
         color: $secondColor;
     }
 
-    &__subtitle {
-        @include subTitle;
-    }
-
     &__title {
-        @include title;
         color: $bgColorSecond;
     }
 
@@ -318,7 +306,11 @@ body {
 
     &__header {
         grid-area: 1 / 1 / 2 / 3;
-        @include subTitle;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        letter-spacing: 2px;
         font-weight: 800;
         color:$bgColorSecond;
     }
@@ -351,14 +343,15 @@ body {
     justify-content: center;
 
     &__header {
-        @include title;
+        font-size: 35px;
+        font-weight: 800;
         text-transform: uppercase;
         color: $secondColor;
-        padding: 20px;
+        margin: 20px;
+        padding: 20px 0;
     }
 
     &__subtitle {
-        @include subTitle;
         margin: 0 auto;
         padding: 10px;
         font-size: 50px;
@@ -450,10 +443,12 @@ body {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 15px;
+    margin: 0 auto;
 
     &__box {
-      
+      width: 80%;
+      margin: 0 auto;
     }
 }
 
@@ -461,9 +456,6 @@ body {
     grid-area: 1 / 1 / 2 / 2;
 
     &__logo {
-        margin: 0 auto;
-        padding: 0 30px;
-        max-width: 90%;
         color: $bgColorSecond;
         font-weight: 800;
         font-size: 40px;
@@ -471,7 +463,11 @@ body {
     }
 
     &__description {
-        @include titleDescription;
+        margin: 20px auto;
+        font-weight: 600;
+        line-height: 200%;
+        text-align: center;
+        color: $secondColor;
         text-align: justify;
     }
 
@@ -479,23 +475,24 @@ body {
 
 .navfooter {
     grid-area: 2 / 1 / 3 / 2;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 
     &__header {
-        @include title;
+        font-weight: 800;
+        color: $primaryColor;
         font-size: 30px;
         text-align: left;
     }
     
     &__group {
         line-height: 300%;
-        display: flex;
-        flex-flow: column wrap;
+        list-style-type: none;
+        margin: 20px 0;
+        padding: 0;
     }
 
     &__item {
-        @include navStyle;
         letter-spacing: 1px;
         text-align: left;
 
@@ -504,23 +501,26 @@ body {
         }
     }
 
-    &__item:before {
-        content: "•"; 
-        color: $bgColorSecond;
-    }
-
-    &_item:hover::before {
-        color: $altColor;
-    }
-
-
     &__link {
-        @include linkStyle;
         color: $bgColorSecond;
-        font-weight: 700;
+        font-weight: 500;
+
+        &:before {
+            content: "• "; 
+            color: $bgColorSecond;
+        }
 
         &:hover {
-         color: $altColor;   
+         cursor: pointer;
+         color: $altColor;
+         border-bottom: 1px solid $altColor;
+         font-weight: 500;
+
+         &::before {
+            content: "> ";
+            color: $altColor;
+            font-weight: 500;
+        }
         }
     }
 
@@ -528,11 +528,9 @@ body {
 
 .social {
     grid-area: 3 / 1 / 4 / 2;
-    margin:0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    max-width: 90%;
 
     &__figure {
         display:flex;
@@ -543,7 +541,8 @@ body {
         height: 50px;
         background: $bgColorSecond;
         border-radius: 50%;
-        margin: 0 10px;
+        margin: 0 auto;
+        cursor: pointer;
 
         &:hover {
             background-color: $secondColor;
@@ -554,6 +553,7 @@ body {
         font-size: 20px;
         color: $bgColor;
     }
-
-
 }
+
+//Breakpoints
+@import '720px'
