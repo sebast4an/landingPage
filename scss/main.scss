@@ -2,6 +2,8 @@
 Author:     Sebastian Szczypiński
 Github:     @sebast4an
 
+CURRENT VERSION IS BETA! I am works!.
+
 Free for everyone. Created for educational purposes.
 -------------------------------------------------------- */
 
@@ -33,6 +35,7 @@ $fontFamily: 'Karla', sans-serif;
 @mixin subTitle {
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 16px;
     margin-bottom:0;
     padding-bottom:0;
     letter-spacing: 2px;
@@ -57,11 +60,37 @@ $fontFamily: 'Karla', sans-serif;
     color: $secondColor;
 }
 
+@mixin buttonBlue {
+    margin: 25px auto;
+    min-width: 220px;
+    min-height: 60px;
+    background-color: $bgColorSecond;
+    border: 1px solid $bgColorSecond+(-10%);
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    
+    &:hover {
+        background-color: $bgColorSecond+40%;
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+        outline: none;
+    }
+
+    &:active {
+        background-color: $bgColorSecond+60%;
+        outline: none;
+    }
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -108,10 +137,12 @@ body {
 }
 
 .start {
-    min-height: 500px;
+    min-height: 550px;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
+    background: $bgColor;
+    background: linear-gradient(180deg, rgba(227,238,248,1) 0%, rgba(255,255,255,1) 100%);
 
     &__header {
         display: flex;
@@ -133,31 +164,12 @@ body {
     }
 
     &__button {
-        margin: 25px auto;
-        min-width: 220px;
-        min-height: 60px;
-        background-color: $bgColorSecond;
-        border: 1px solid $bgColorSecond+(-10%);
-        font-weight: 600;
-        letter-spacing: 2px;
-        border-radius: 3px;
-        color: #fff;
-        outline: none;
-        
-        &:hover {
-            background-color: $bgColorSecond+40%;
-            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
-            outline: none;
-        }
-
-        &:active {
-            background-color: $bgColorSecond+60%;
-            outline: none;
-        }
+       @include buttonBlue;
     }
 }
 
 .simple {
+    padding: 40px 0;
     min-height: 600px;
     background-color: $bgColorSecond;
     text-align: center;
@@ -165,13 +177,14 @@ body {
 
     &__figure {
         position:relative;
-        min-height: 290px;
+        min-height: 270px;
+        margin:0;
     }
 
     &__phone {
         top: 50px;
         left:0;
-        font-size: 176px;
+        font-size: 175px;
         color: $bgColor;
         transform:rotate(-25deg);
         position: absolute;
@@ -211,11 +224,6 @@ body {
         grid-gap: 15px;
     }
 
-    &__item:last-child {
-        padding-bottom: 60px;
-    }
-
-
     &__icon {
         font-size: 55px;
         color: $bgColor;
@@ -242,12 +250,16 @@ body {
 
 .code {
     margin: 0 auto;
+    padding: 40px 0;
     text-align: center;
+    min-height: 600px;
+    background: $bgColor;
+    background: linear-gradient(170deg, rgba(227,238,248,1) 30%, rgba(255,255,255,1) 100%);
 
     &__page {
         font-size: 180px;
         text-align: center;
-        color:$secondColor;
+        color: $secondColor;
     }
 
     &__subtitle {
@@ -263,7 +275,9 @@ body {
         @include titleDescription;
     }
 }
+
 .desc {
+
     &__item {
         display: grid;
         grid-template-columns: auto;
@@ -272,11 +286,6 @@ body {
         width: 80%;
         grid-gap: 15px;
     }
-
-    &__item:last-child {
-        padding-bottom: 60px;
-    }
-
 
     &__icon {
         font-size: 55px;
@@ -298,5 +307,205 @@ body {
         text-align: justify;
         font-weight: 500;
     }
+}
+
+.pricing {
+    min-height: 600px;
+    padding: 40px 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $secondColor;
+    color: $bgColor;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.box {
+    background-color: $bgColor;
+    border: 1px solid $bgColor;
+    border-radius: 3px;
+    margin: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    &__header {
+        @include title;
+        text-transform: uppercase;
+        color: $secondColor;
+        padding: 20px 0;
+    }
+
+    &__subtitle {
+        @include subTitle;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 50px;
+    }
+
+    &__description {
+        @include titleDescription;
+        color: $secondColor;
+        text-align: justify;
+      }
+
+    &__button {
+        @include buttonBlue;
+  
+
+        &:hover {
+            background-color: $bgColorSecond+40%;
+            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+            outline: none;
+        }
+    
+        &:active {
+            background-color: $bgColorSecond+60%;
+            outline: none;
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        margin:0 auto;
+        padding: 4px;
+    }
+
+    &__list{
+        text-align: left;
+
+        &-mark{
+            color: $bgColorSecond;
+        }
+    }
+
+    // active elements
+    &-active{
+    background-color: $bgColorSecond;
+    color: $bgColor;
+    border: 1px solid $bgColorSecond;
+    }
+
+    &__header-active {
+        color: $bgColor;
+    }
+
+    &__subtitle-active {
+        color: $secondColor;
+    }
+
+    &__description-active {
+        color: $bgColor;
+    }
+
+    &__button-active {
+        background-color: $bgColor;
+        color: $bgColorSecond;
+
+        &:hover {
+            background-color: $bgColor+40%;
+            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+            outline: none;
+        }
+    
+        &:active {
+            background-color: $bgColor+60%;
+            outline: none;
+        }
+    }
+
+    &__list-markactive {
+        color:$secondColor;
+    }
+}
+
+.footer {
+    background: $bgColor;
+    background: linear-gradient(332deg, rgba(227,238,248,1) 56%, rgba(255,255,255,1) 100%);
+    padding: 40px 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.about {
+    grid-area: 1 / 1 / 2 / 2;
+
+    &__logo {
+        margin: 0 auto;
+        padding: 0 30px;
+        max-width: 90%;
+        color: $bgColorSecond;
+        font-weight: 800;
+        font-size: 40px;
+        text-align: left;
+    }
+
+    &__description {
+        @include titleDescription;
+        text-align: justify;
+    }
+
+}
+
+.navfooter {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 0;
+    padding: 0;
+
+    &__header {
+        @include title;
+        font-size: 30px;
+        text-align: left;
+    }
+    
+    &__group {
+        line-height: 300%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    &__item {
+        @include navStyle;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+
+    &__item:before {
+        content: "•"; 
+        color: $bgColorSecond;
+    }
+
+    &__link {
+        @include linkStyle;
+        color: $bgColorSecond;
+        font-weight: 700;
+    }
+
+}
+
+.social {
+    grid-area: 3 / 1 / 4 / 2;
+    
+
+    &__figure {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background: $bgColorSecond;
+        border-radius: 50%
+    }
+
+    &__icon {
+        font-size: 55px;
+        color: $bgColor;
+    }
+
 
 }

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Landing Page</title>
 
+    <!-- CURRENT VERSION IS BETA! I am works!. -->
+
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/fontello.css">
 </head>
@@ -58,8 +60,8 @@
             <h1 class="simple__title">
                 Website scaled to every device
             </h1>
-            <p class="simple__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut saepe vitae vel tempora, veniam nemo illum.
+            <p class="simple__description ">
+                HTML5 sematic. Preprocessor SCSS. BEM metodology. RWD: CSS Grid & Flexbox. Fontello font.
             </p>
         </header>
         <div class="simple__info info">
@@ -126,10 +128,138 @@
         </div>
     </aside>
     <main class="pricing">
+        <section class="pricing__box box">
+            <header class="box__header">
+                Regular plan
+            </header>
+            <p class="box__subtitle">
+                6$
+            </p>
+            <article class="box__description">
+                Features:
+                <ul class="box__group">
+                    <li class="box__list">
+                        <span class="box__list-mark">HTML5</span> semantic
+                    </li>
+                    <li class="box__list">
+                        <span class="box__list-mark">BEM</span> metodology
+                    </li>
+                    <li class="box__list">
+                        preprocessor <span class="box__list-mark">SCSS</span>
+                    </li>
+                    <li class="box__list">
+                        CSS <span class="box__list-mark">Grid & Flexbox</span>
+                    </li>
+                </ul>
+                <p>And all options free plan: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+            <button class="box__button" type="button">
+                Go on!
+            </button>
+        </section>
+
+        <!-- default: active -->
+        <section class="pricing__box box box-active">
+            <header class="box__header box__header-active">
+                Senior plan
+            </header>
+            <p class="box__subtitle box__subtitle-active">
+                12$
+            </p>
+            <article class="box__description box__description-active">
+                Features:
+                <ul class="box__group">
+                    <li class="box__list">
+                        <span class="box__list-markactive">HTML5</span> semantic
+                    </li>
+                    <li class="box__list">
+                        <span class="box__list-markactive">BEM</span> metodology
+                    </li>
+                    <li class="box__list">
+                        preprocessor <span class="box__list-markactive">SCSS</span>
+                    </li>
+                    <li class="box__list">
+                        CSS <span class="box__list-markactive">Grid & Flexbox</span>
+                    </li>
+                    <li class="box__list">
+                        Vanilla<span class="box__list-markactive">JS</span>
+                    </li>
+                    <li class="box__list">
+                        <span class="box__list-markactive">Fontello</span> Font
+                    </li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+            <button class="box__button box__button-active" type="button">
+                Go on!
+            </button>
+        </section>
+
+        <section class="pricing__box box">
+            <header class="box__header">
+                Junior Plan
+            </header>
+            <p class="box__subtitle">
+                0$
+            </p>
+            <article class="box__description">
+            Features:
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="box__list-mark">Ut itaque molestiae mollitia nulla a eos assumenda reprehenderit</span>, similique ab earum at optio illum, sed fugit!</p>
+            </article>
+            <button class="box__button" type="button">
+                Go on!
+            </button>
+        </section>
+
 
     </main>
     <footer class="footer">
+        <section class="footer__box about">
+            <header class="about__logo">
+                LOGO
+            </header>
+            <article class="about__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolorum ullam magnam repellendus consectetur harum, omnis iure tempora magni vero nobis iusto earum aliquam excepturi dolorem voluptates accusamus sapiente adipisci?
+            </article>
+        </section>
 
+        <section class="footer__box navfooter">
+            <header class="navfooter__header">
+                Navigation:
+            </header>
+            <ul class="navfooter__group">        
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Simple</a>
+                </li>
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Code</a>
+                </li>
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Pricing</a>
+                </li>
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Footer</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="footer__box social">
+            <figure class="social__figure">
+                <i class="social__icon icon-facebook"></i>
+            </figure>
+
+            <figure class="social__figure">
+                <i class="social__icon icon-twitter"></i>
+            </figure>
+
+            <figure class="social__figure">
+                <i class="social__icon icon-instagram"></i>
+            </figure>
+
+            <figure class="social__figure">
+                <i class="social__icon icon-mail"></i>
+            </figure>
+        </section>
     </footer>
 
 </div>
