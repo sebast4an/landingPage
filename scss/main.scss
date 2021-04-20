@@ -144,6 +144,24 @@ body {
     background: $bgColor;
     background: linear-gradient(180deg, rgba(227,238,248,1) 0%, rgba(255,255,255,1) 100%);
 
+    @media screen and (min-height:600px) {
+        min-height: 625px;
+    }
+
+    @media screen and (min-height: 700px) {
+        min-height: 770px;
+    }
+
+    @media screen and (min-height: 900px) {
+        min-height: 1000px;
+    }
+
+    @media screen and (min-height: 1200px) {
+        min-height: 1350px;
+    }
+
+
+
     &__header {
         display: flex;
         flex-flow: column wrap;
@@ -172,18 +190,21 @@ body {
     padding: 40px 0;
     min-height: 600px;
     background-color: $bgColorSecond;
+    background: linear-gradient(40deg, rgba(35,134,250,1) 60%, rgba(75,158,255,1) 100%);
     text-align: center;
     color: $bgColor;
 
     &__figure {
         position:relative;
         min-height: 270px;
-        margin:0;
+        margin: 0;
+        display: flex;
+        flex-flow:column wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     &__phone {
-        top: 50px;
-        left:0;
         font-size: 175px;
         color: $bgColor;
         transform:rotate(-25deg);
@@ -333,7 +354,7 @@ body {
         @include title;
         text-transform: uppercase;
         color: $secondColor;
-        padding: 20px 0;
+        padding: 20px;
     }
 
     &__subtitle {
@@ -383,9 +404,10 @@ body {
 
     // active elements
     &-active{
-    background-color: $bgColorSecond;
-    color: $bgColor;
-    border: 1px solid $bgColorSecond;
+        background-color: $bgColorSecond;
+        background: linear-gradient(203deg, rgba(35,134,250,1) 60%, rgba(75,158,255,1) 100%);
+        color: $bgColor;
+        border: 1px solid $bgColorSecond;
     }
 
     &__header-active {
@@ -426,9 +448,13 @@ body {
     background: linear-gradient(332deg, rgba(227,238,248,1) 56%, rgba(255,255,255,1) 100%);
     padding: 40px 0;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto;
     grid-template-columns: 1fr;
     grid-gap: 10px;
+
+    &__box {
+      
+    }
 }
 
 .about {
@@ -472,6 +498,10 @@ body {
         @include navStyle;
         letter-spacing: 1px;
         text-align: left;
+
+        &:hover {
+            color: $altColor;
+        }
     }
 
     &__item:before {
@@ -479,31 +509,49 @@ body {
         color: $bgColorSecond;
     }
 
+    &_item:hover::before {
+        color: $altColor;
+    }
+
+
     &__link {
         @include linkStyle;
         color: $bgColorSecond;
         font-weight: 700;
+
+        &:hover {
+         color: $altColor;   
+        }
     }
 
 }
 
 .social {
     grid-area: 3 / 1 / 4 / 2;
-    
+    margin:0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 90%;
 
     &__figure {
         display:flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         background: $bgColorSecond;
-        border-radius: 50%
+        border-radius: 50%;
+        margin: 0 10px;
+
+        &:hover {
+            background-color: $secondColor;
+        }
     }
 
     &__icon {
-        font-size: 55px;
+        font-size: 20px;
         color: $bgColor;
     }
 
