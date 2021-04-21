@@ -13,6 +13,7 @@ Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM 
 * Media queries
 * [normalize.css](https://github.com/necolas/normalize.css)
 * Fontello font
+* Google fonts
 * VanillaJS
 
 ## Currently:
