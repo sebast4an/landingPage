@@ -1,8 +1,8 @@
 # landingPage
-The project I create in my free time.
+The project I create in my free time. The current state is described below.
 
 ## Project brief:
-Simple, lightweight project. Compliant with the rules: mobile first. DRY code and BEM methodology.
+Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM methodology. Only using CSS animation and clear JavaScript.
 
 ## Use:
 
@@ -15,3 +15,4 @@ Simple, lightweight project. Compliant with the rules: mobile first. DRY code an
 * VanillaJS
 
 ## Currently:
+Finished 90% mobile view. Next debugging, refactoring and making view for big screen.
