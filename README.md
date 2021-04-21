@@ -11,6 +11,7 @@ Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM 
 * preprocesor SASS (SCSS)
 * CSS Grid & Flexbox
 * Media queries
+* [normalize.css](https://github.com/necolas/normalize.css)
 * Fontello font
 * VanillaJS
 
