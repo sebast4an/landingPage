@@ -6,7 +6,6 @@ Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM 
 
 ## Use:
 =======
-
 * HTML5 semantics
 * DRY, BEM methodology
 * preprocesor SASS (SCSS)
