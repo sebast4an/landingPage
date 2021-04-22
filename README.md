@@ -5,6 +5,8 @@ The project I create in my free time. [The current state is described below.](#c
 Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM methodology. Only using CSS animation and clear JavaScript.
 
 ## Use:
+=======
+
 * HTML5 semantics
 * DRY, BEM methodology
 * preprocesor SASS (SCSS)
