@@ -8,32 +8,41 @@
 
     <!-- CURRENT VERSION IS BETA! I am works!. -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fontello.css">
 </head>
 <body>
 <div class="container">
-    <nav class="nav">
-        <h1 class="nav__logo">
+    <nav class="navigation">
+        <h1 class="navigation__logo">
             LOGO
         </h1>
-        <ul class="nav__list resetlist">
-            <li class="nav__item resetlist">
-                <a class="nav__link link" href="#">Simple</a>
+
+        <button class="navigation__button nav">
+            <span class="nav__line">
+                <span class="nav__fill"></span>
+            </span>
+        </button>
+        
+    <!--
+        <ul class="navigation__list resetlist">
+            <li class="navigation__item resetlist">
+                <a class="navigation__link link" href="#">Simple</a>
             </li>
-            <li class="nav__item resetlist">
-                <a class="nav__link link" href="#">Code</a>
+            <li class="navigation__item resetlist">
+                <a class="navigation__link link" href="#">Code</a>
             </li>
-            <li class="nav__item resetlist">
-                <a class="nav__link link" href="#">Pricing</a>
+            <li class="navigation__item resetlist">
+                <a class="navigation__link link" href="#">Pricing</a>
             </li>
-            <li class="nav__item resetlist">
-                <a class="nav__link link" href="#">Footer</a>
+            <li class="navigation__item resetlist">
+                <a class="navigation__link link" href="#">Footer</a>
             </li>
         </ul>
+    -->
     </nav>
 
-    <section class="start">
+    <section class="container__item start">
         <header class="start__header">
             <p class="start__subtitle subtitle">
                 Easy to use
@@ -49,7 +58,7 @@
             </button>
         </header>
     </section>
-    <article class="simple">
+    <article class="container__item simple">
         <figure class="simple__figure">
             <i class="simple__phone icon-mobile"></i>
         </figure>
@@ -88,7 +97,7 @@
             </section>   
         </div>
     </article>
-    <aside class="code">
+    <aside class="container__item code">
         <figure class="code__figure">
             <i class="code__page icon-landingpage"></i>
         </figure>
@@ -127,7 +136,7 @@
             </section>   
         </div>
     </aside>
-    <main class="pricing">
+    <main class="container__item pricing">
         <section class="pricing__box box">
             <header class="box__header">
                 Regular plan
@@ -213,7 +222,7 @@
 
 
     </main>
-    <footer class="footer">
+    <footer class="container__item footer">
         <section class="footer__box about">
             <header class="about__logo">
                 LOGO
@@ -244,22 +253,26 @@
         </section>
 
         <section class="footer__box social">
-            <a class="social__figure" href="#">
+            <header class="social__header">
+                Follow me:
+            </header>
+
+            <a class="social__figure social__fb" href="#">
                 <i class="social__icon icon-facebook">
                 </i>
             </a>
 
-            <a class="social__figure" href="#">
+            <a class="social__figure social__tw" href="#">
                 <i class="social__icon icon-twitter">
                 </i>
             </a>
 
-            <a class="social__figure" href="#">
+            <a class="social__figure social__insta" href="#">
                 <i class="social__icon icon-instagram">
                 </i>
             </a>
 
-            <a class="social__figure" href="#">
+            <a class="social__figure social__mail" href="#">
                 <i class="social__icon icon-mail">
                 </i>
             </a>
