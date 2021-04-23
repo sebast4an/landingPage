@@ -96,7 +96,6 @@ h1 {
     -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
     padding:0;
     margin: 0;
@@ -111,12 +110,12 @@ body {
 }
 
 
-// navigation sticky
+// navigation
 .navigation {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
     position: fixed;
     z-index: 99999;
@@ -126,33 +125,82 @@ body {
         color: $bgColorSecond;
         font-size: 30px;
         font-weight: 800;
+        margin: 10px 20px;
     }
 
     &__item {
         display: inline;
         margin: 0 3px;
     }
-
-    /*
-    &__link {
-        text-transform:uppercase;
-        font-size: 14px;
-
-        &:hover {
-            cursor: pointer;
-            color: $bgColorSecond;
-            font-weight: 700;
-            border-bottom: 1px solid $bgColorSecond;
-
-            &::before {
-                content: "> ";
-                font-weight: 700;
-            }
-        }
-    }
-    */
 }
 
+    //button navigation mobile
+    .navbutton {
+        margin: 0 20px;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+
+        &__box {
+            position: relative;
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+        }
+
+        &__fill {
+            position: absolute;
+            width: 70%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15%;
+            background-color: $secondColor;
+            transition: background .6s ease-in;
+
+            //make lines 
+            @mixin lines($marginTop) {
+                content: "";
+                left: 0;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $secondColor;
+                margin-top: $marginTop;
+                transition: transform .4s ease-in;
+            }
+
+            &::before {
+                @include lines(8px);
+            }
+
+            &::after {
+                @include lines(-8px);
+            }
+        }   //end make line
+        
+        //active button 
+        &--active .navbutton__fill {
+            background-color: transparent;
+            transition: background-color .2s ease-in-out;
+        }
+
+        &--active .navbutton__fill::before{
+            background-color: $altColor;
+            transform: translateY(-8px) rotate(45deg);
+
+            transition: transform .3s ease-in;
+        }
+
+        &--active .navbutton__fill::after {
+            background-color: $altColor;
+            transform: translateY(8px) rotate(-45deg);
+
+            transition: transform .3s ease-in;
+        }
+    }
 
 .start {
     min-height: 100vh;
