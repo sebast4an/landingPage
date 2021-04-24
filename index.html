@@ -23,15 +23,30 @@
                 <span class="navbutton__fill"></span>
             </span>
         </button>
+
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Simple</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Code</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Pricing</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Footer</a>
+            </li>
+        </ul>
         
     </nav>
 
     <section class="container__item start">
         <header class="start__header">
-            <p class="start__subtitle subtitle">
+            <p class="start__subtitle">
                 Easy to use
             </p>
-            <h1 class="start__title title">
+            <h1 class="start__title">
                 Responsive Landing Page
             </h1>
             <p class="start__description">
@@ -47,10 +62,10 @@
             <i class="simple__phone icon-mobile"></i>
         </figure>
         <header class="simple__header">
-            <p class="simple__subtitle subtitle">
+            <p class="simple__subtitle">
                 Responsive web design
             </p>
-            <h1 class="simple__title title">
+            <h1 class="simple__title">
                 Website scaled to every device
             </h1>
             <p class="simple__description ">
@@ -86,10 +101,10 @@
             <i class="code__page icon-landingpage"></i>
         </figure>
         <header class="code__header">
-            <p class="code__subtitle subtitle">
+            <p class="code__subtitle">
                 Free for everyone
             </p>
-            <h1 class="code__title title">
+            <h1 class="code__title">
                 Only code
             </h1>
             <p class="code__description">
@@ -120,92 +135,40 @@
             </section>   
         </div>
     </aside>
-    <main class="container__item pricing">
-        <section class="pricing__box box">
-            <header class="box__header">
-                Regular plan
+
+    <main class="pricing">
+        <article class="pricing__box">
+            <header class="pricing__header">
+                Basic
             </header>
-            <p class="box__subtitle subtitle">
-                6$
-            </p>
-            <article class="box__description">
-                Features:
-                <ul class="box__group">
-                    <li class="box__list resetlist">
-                        <span class="box__list-mark">HTML5</span> semantic
-                    </li>
-                    <li class="box__list">
-                        <span class="box__list-mark">BEM</span> metodology
-                    </li>
-                    <li class="box__list">
-                        preprocessor <span class="box__list-mark">SCSS</span>
-                    </li>
-                    <li class="box__list">
-                        CSS <span class="box__list-mark">Grid & Flexbox</span>
-                    </li>
-                </ul>
-                <p>And all options free plan: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
-            <button class="box__button" type="button">
-                Go on!
+            <h1 class="pricing__price">
+                19$ 
+            </h1>
+            <section class="pricing__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, at! Odit, excepturi.
+            </section>
+            <ul class="pricing__list">
+                <li class="pricing__item">
+                    HTML5 semanitc
+                </li>
+                <li class="pricing__item">
+                    BEM metodology
+                </li>
+                <li class="pricing__item">
+                    SCSS preprocessor
+                </li>
+                <li class="pricing__item">
+                    CSS Grid & Flexbox
+                </li>
+            </ul>
+            <button type="button" class="pricing__button">
+                Start
             </button>
-        </section>
-
-        <!-- default: active -->
-        <section class="pricing__box box box-active">
-            <header class="box__header box__header-active">
-                Senior plan
-            </header>
-            <p class="box__subtitle box__subtitle-active">
-                12$
-            </p>
-            <article class="box__description box__description-active">
-                Features:
-                <ul class="box__group">
-                    <li class="box__list">
-                        <span class="box__list-markactive">HTML5</span> semantic
-                    </li>
-                    <li class="box__list">
-                        <span class="box__list-markactive">BEM</span> metodology
-                    </li>
-                    <li class="box__list">
-                        preprocessor <span class="box__list-markactive">SCSS</span>
-                    </li>
-                    <li class="box__list">
-                        CSS <span class="box__list-markactive">Grid & Flexbox</span>
-                    </li>
-                    <li class="box__list">
-                        Vanilla<span class="box__list-markactive">JS</span>
-                    </li>
-                    <li class="box__list">
-                        <span class="box__list-markactive">Fontello</span> Font
-                    </li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </article>
-            <button class="box__button box__button-active" type="button">
-                Go on!
-            </button>
-        </section>
-
-        <section class="pricing__box box">
-            <header class="box__header">
-                Junior Plan
-            </header>
-            <p class="box__subtitle subtitle">
-                0$
-            </p>
-            <article class="box__description">
-            Features:
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="box__list-mark">Ut itaque molestiae mollitia nulla a eos assumenda reprehenderit</span>, similique ab earum at optio illum, sed fugit!</p>
-            </article>
-            <button class="box__button" type="button">
-                Go on!
-            </button>
-        </section>
-
-
+        </article>
     </main>
+
+
+
     <footer class="container__item footer">
         <section class="footer__box about">
             <header class="about__logo">
@@ -221,17 +184,17 @@
                 Navigation:
             </header>
             <ul class="navfooter__group">        
-                <li class="navfooter__item resetlist">
-                    <a class="navfooter__link link" href="#">Simple</a>
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Simple</a>
                 </li>
-                <li class="navfooter__item resetlist">
-                    <a class="navfooter__link link" href="#">Code</a>
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Code</a>
                 </li>
-                <li class="navfooter__item resetlist">
-                    <a class="navfooter__link link" href="#">Pricing</a>
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Pricing</a>
                 </li>
-                <li class="navfooter__item resetlist">
-                    <a class="navfooter__link link" href="#">Footer</a>
+                <li class="navfooter__item">
+                    <a class="navfooter__link" href="#">Footer</a>
                 </li>
             </ul>
         </section>
@@ -265,6 +228,6 @@
 
 </div>
 
-<script src="js/index.js"></script>
+<script src="js/index.js" defer></script>
 </body>
 </html>

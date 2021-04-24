@@ -19,15 +19,39 @@ $fontFamily: 'Karla', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
 
 
-//minxin
-@mixin titleDescription {
+//minxins
+
+//include in: 
+@mixin subtitle($color) {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    letter-spacing: 2px;
+    color: $color;
+}
+
+@mixin title {
+    margin: 15px auto 10px auto;
+    width: 80%;
+}
+
+@mixin description($color) {
     padding:0 30px;
     max-width: 90%;
     margin: 20px auto;
     font-weight: 600;
     line-height: 200%;
     text-align: center;
-    color: $secondColor;
+    color: $color;
+}
+
+@mixin listStyleReset {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 @mixin buttonBlue {
@@ -41,16 +65,19 @@ $fontFamily: 'Karla', sans-serif;
     border-radius: 3px;
     color: #fff;
     outline: none;
+    transition: background .3s ease-in;
     
     &:hover {
-        background-color: $bgColorSecond+40%;
-        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+        background-color: $bgColorSecond+50%;
         outline: none;
+
+        transition: background .3s ease-in;
     }
 
     &:active {
-        background-color: $bgColorSecond+60%;
+        background-color: $bgColorSecond+(-70%);
         outline: none;
+        transition: background .3s ease-in;
     }
 }
 
@@ -61,30 +88,8 @@ h1 {
     color: $primaryColor;
 }
 
-.link {
+a {
     text-decoration: none;
-    color: $altColor;
-}
-
-.resetlist {
-    list-style: none;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-}
-
-.title {
-    margin: 15px auto 10px auto;
-    width: 80%;
-}
-
-.subtitle {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    letter-spacing: 2px;
     color: $altColor;
 }
 
@@ -128,10 +133,57 @@ body {
         margin: 10px 20px;
     }
 
-    &__item {
-        display: inline;
-        margin: 0 3px;
+    //navigation panel
+    &__list {
+        @include listStyleReset;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $bgColorSecond;
+        background: linear-gradient(232deg, rgba(37,138,255,1) 50%, rgba(96,163,240,1) 100%);
+        width: 70vw;
+        height: 100vh;
+        border-right: 1px solid $bgColorSecond+(-10%);
+        
+        transform: translateX(-71vw);
+        transition: transform .4s ease-in;
+
+        &--active {
+            transform: translateX(0);
+            transition: transform .4s ease-in;
+            box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+        }
     }
+    
+    &__item {
+        @include listStyleReset;
+        padding: 25px;
+        margin: 10px;
+    
+        &:first-child {
+            margin-top: 25px;
+        }
+    }
+
+    &__link {
+        color: $bgColor;
+        font-size: 25px;
+        text-transform: uppercase;
+
+        &:hover {
+            display: block;
+            font-weight: 600;
+        }
+        &:hover::before {
+            content: "> ";
+            font-weight: 600;
+            transform: translate(80%);
+
+            transition: transform .3s ease-in;
+        }
+    }
+
 }
 
     //button navigation mobile
@@ -150,6 +202,7 @@ body {
             height: 38px;
         }
 
+        //lines
         &__fill {
             position: absolute;
             width: 70%;
@@ -217,8 +270,16 @@ body {
         text-align: center;
     }
 
+    &__title {
+        @include title;
+    }
+
+    &__subtitle {
+        @include subtitle($altColor);
+    }
+
     &__description {
-        @include titleDescription;
+        @include description($secondColor);
     }
 
     &__button {
@@ -259,17 +320,17 @@ body {
     }
 
     &__subtitle {
-        color: $secondColor;
+        @include subtitle($secondColor);
     }
 
     &__title {
+        @include title;
         color: $bgColor;
         
     }
 
     &__description {
-        @include titleDescription;
-        color: $bgColor+(-20%);
+        @include description($bgColor+(-20%));
     }
 }
 
@@ -326,12 +387,17 @@ body {
         color: $secondColor;
     }
 
+    &__subtitle {
+        @include subtitle($altColor);
+    }
+
     &__title {
+        @include title;
         color: $bgColorSecond;
     }
 
     &__description {
-        @include titleDescription;
+        @include description($secondColor);
     }
 }
 
@@ -374,121 +440,55 @@ body {
 
 .pricing {
     min-height: 600px;
-    padding: 40px 0;
-    margin: 0 auto;
-    text-align: center;
     background-color: $secondColor;
-    color: $bgColor;
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
-}
+    background: radial-gradient(circle, rgba(52,73,94,1) 0%, rgba(32,47,62,1) 100%);
+    color: $secondColor;
+    margin: 0 auto;
+    padding: 40px;
 
-.box {
-    background-color: $bgColor;
-    border: 1px solid $bgColor;
-    border-radius: 3px;
-    margin: 20px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    
-
-    &__header {
-        font-size: 35px;
-        font-weight: 800;
-        text-transform: uppercase;
-        color: $secondColor;
-        margin: 20px;
-        padding: 20px 0;
+    &__box {
+        background-color: $bgColor;
+        padding: 20px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        border: 1px solid $bgColor+(-20%);
+        border-radius: 3px;
     }
 
-    &__subtitle {
-        margin: 0 auto;
-        padding: 10px;
-        font-size: 50px;
+    &__header {
+        text-align: left;
+        font-weight: 700;
+    }
+
+    &__price {
+        text-align: center;
     }
 
     &__description {
-        @include titleDescription;
-        color: $secondColor;
         text-align: justify;
-      }
+        line-height: 150%;
+    }
+
+    &__list {
+        @include listStyleReset;
+
+        line-height: 200%;
+        margin: 20px 0;
+    }
+
+    &__item {
+        @include listStyleReset;
+    }
 
     &__button {
         @include buttonBlue;
-  
-
-        &:hover {
-            background-color: $bgColorSecond+40%;
-            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
-            outline: none;
-        }
-    
-        &:active {
-            background-color: $bgColorSecond+60%;
-            outline: none;
-        }
     }
 
-    &__group {
-        display: flex;
-        flex-flow: column wrap;
-        align-content: center;
-        margin:0 auto;
-        padding: 4px;
-    }
-
-    &__list{
-        text-align: left;
-
-        &-mark{
-            color: $bgColorSecond;
-        }
-    }
-
-    // active elements
-    &-active{
-        background-color: $bgColorSecond;
-        background: linear-gradient(203deg, rgba(35,134,250,1) 60%, rgba(75,158,255,1) 100%);
-        color: $bgColor;
-        border: 1px solid $bgColorSecond;
-    }
-
-    &__header-active {
-        color: $bgColor;
-    }
-
-    &__subtitle-active {
-        color: $secondColor;
-        font-weight: 800;
-        text-transform: uppercase;
-    }
-
-    &__description-active {
-        color: $bgColor;
-    }
-
-    &__button-active {
-        background-color: $bgColor;
-        color: $bgColorSecond;
-
-        &:hover {
-            background-color: $bgColor+40%;
-            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
-            outline: none;
-        }
-    
-        &:active {
-            background-color: $bgColor+60%;
-            outline: none;
-        }
-    }
-
-    &__list-markactive {
-        color:$secondColor;
-    }
 }
+
+   
+
 
 .footer {
     background: $bgColor;
@@ -542,6 +542,7 @@ body {
     }
 
     &__item {
+        @include listStyleReset;
         letter-spacing: 1px;
         text-align: left;
 
@@ -564,6 +565,8 @@ body {
          color: $altColor;
          border-bottom: 1px solid $altColor;
          font-weight: 500;
+
+         transition: .3s ease-in;
 
          &::before {
             content: "> ";
@@ -599,9 +602,12 @@ body {
         border-radius: 50%;
         margin: 0 auto;
         cursor: pointer;
+        
+        transition: background .3s ease-in;
 
         &:hover {
             background-color: $secondColor;
+            transition: background .3s ease-in;
         }
     }
 
@@ -670,7 +676,7 @@ body {
         }
 
         &__icon {
-            font-size: 29px;
+            font-size: 22px;
         }
 
         &__fb {
@@ -708,7 +714,6 @@ body {
     }
 
     .box {
-        padding: 5% 10%;
-        width: 70%;
+    
     }
 }
