@@ -13,17 +13,16 @@
 </head>
 <body>
 <div class="container">
+    
     <nav class="navigation">
         <h1 class="navigation__logo">
             LOGO
         </h1>
-
         <button class="navbutton">
             <span class="navbutton__box">
                 <span class="navbutton__fill"></span>
             </span>
         </button>
-
         <ul class="navigation__list">
             <li class="navigation__item">
                 <a class="navigation__link" href="#">Simple</a>
@@ -38,7 +37,6 @@
                 <a class="navigation__link" href="#">Footer</a>
             </li>
         </ul>
-        
     </nav>
 
     <section class="container__item start">
@@ -96,6 +94,7 @@
             </section>   
         </div>
     </article>
+
     <aside class="container__item code">
         <figure class="code__figure">
             <i class="code__page icon-landingpage"></i>
@@ -137,37 +136,77 @@
     </aside>
 
     <main class="pricing">
-        <article class="pricing__box">
-            <header class="pricing__header">
-                Basic
-            </header>
-            <h1 class="pricing__price">
-                19$ 
+        <header class="pricing__header">
+            <p class="pricing__subtitle">
+                Available options
+            </p>
+            <h1 class="pricing__title">
+                Choose options for you!
             </h1>
-            <section class="pricing__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, at! Odit, excepturi.
-            </section>
-            <ul class="pricing__list">
-                <li class="pricing__item">
-                    HTML5 semanitc
-                </li>
-                <li class="pricing__item">
-                    BEM metodology
-                </li>
-                <li class="pricing__item">
-                    SCSS preprocessor
-                </li>
-                <li class="pricing__item">
-                    CSS Grid & Flexbox
-                </li>
-            </ul>
-            <button type="button" class="pricing__button">
-                Start
-            </button>
-        </article>
+        </header>
+
+        <section class="offer">
+        <!-- first -->
+           <article class="offer__box offer__box--active">
+                <header class="offer__header">
+                    <p>Basic</p>
+                </header>
+                <h1 class="offer__price">
+                    <span>$</span>5<span>/month</span>
+                </h1>
+                <section class="offer__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, at! Odit, excepturi.
+                </section>
+                <ul class="offer__list">
+                    <li class="offer__item">
+                        HTML5 semanitc
+                    </li>
+                    <li class="offer__item">
+                        BEM metodology
+                    </li>
+                    <li class="offer__item">
+                        SCSS preprocessor
+                    </li>
+                    <li class="offer__item">
+                        CSS Grid & Flexbox
+                    </li>
+                </ul>
+                <button type="button" class="offer__button">
+                    Start
+                </button>
+            </article>
+
+        <!-- second -->
+            <article class="offer__box">
+                <header class="offer__header">
+                    <p>Regular</p>
+                </header>
+                <h1 class="offer__price">
+                    <span>$</span>12<span>/month</span>
+                </h1>
+                <section class="offer__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, at! Odit, excepturi.
+                </section>
+                <ul class="offer__list">
+                    <li class="offer__item">
+                        HTML5 semanitc
+                    </li>
+                    <li class="offer__item">
+                        BEM metodology
+                    </li>
+                    <li class="offer__item">
+                        SCSS preprocessor
+                    </li>
+                    <li class="offer__item">
+                        CSS Grid & Flexbox
+                    </li>
+                </ul>
+                <button type="button" class="offer__button">
+                    Start
+                </button>
+            </article>
+        </section>
     </main>
-
-
 
     <footer class="container__item footer">
         <section class="footer__box about">

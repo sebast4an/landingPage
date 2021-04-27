@@ -4,7 +4,9 @@ The project I create in my free time. [The current state is described below.](#c
 ## Project brief:
 Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM methodology. Only using CSS animation and clear JavaScript.
 
-Preview mobile mockup: [CLICK](https://github.com/sebast4an/landingPage/blob/beta/preview_mobile_mockup.png)
+Preview mobile mockup: [CLICK](https://github.com/sebast4an/landingPage/mockup/blob/beta/alpha_version_mobile.png)
+
+Preview 720p: [CLICK](https://github.com/sebast4an/landingPage/mockup/blob/beta/alpha_version_720p.png)
 
 ## Use:
 * HTML5 semantics

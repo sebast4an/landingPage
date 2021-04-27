@@ -10,10 +10,12 @@ Free for everyone. Created for educational purposes.
 
 //variables
 $bgColor: #e3eef8;
-$bgColorSecond: #258aff;
-$altColor: #666666;
-$primaryColor: #1f1f1f;
+$classicWhite: #fff;
+$blueColor: #258aff;
+$greyColor: #666666;
+$blackColor: #1f1f1f;
 $secondColor: #222f3f;
+$orangeColor: #fc593b;
 $fontFamily: 'Karla', sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
@@ -54,12 +56,12 @@ $fontFamily: 'Karla', sans-serif;
     margin: 0;
 }
 
-@mixin buttonBlue {
+@mixin button($color) {
     margin: 25px auto;
     min-width: 220px;
     min-height: 60px;
-    background-color: $bgColorSecond;
-    border: 1px solid $bgColorSecond+(-10%);
+    background-color: $color;
+    border: 1px solid $color+(-10%);
     font-weight: 600;
     letter-spacing: 2px;
     border-radius: 3px;
@@ -68,14 +70,14 @@ $fontFamily: 'Karla', sans-serif;
     transition: background .3s ease-in;
     
     &:hover {
-        background-color: $bgColorSecond+50%;
+        background-color: $color+50%;
         outline: none;
 
         transition: background .3s ease-in;
     }
 
     &:active {
-        background-color: $bgColorSecond+(-70%);
+        background-color: $color+(-70%);
         outline: none;
         transition: background .3s ease-in;
     }
@@ -85,16 +87,19 @@ $fontFamily: 'Karla', sans-serif;
 h1 {
     font-size: 35px;
     font-weight: 800;
-    color: $primaryColor;
+    color: $blackColor;
 }
 
 a {
     text-decoration: none;
-    color: $altColor;
+    color: $greyColor;
 }
 
+button, input {
+    font-family: $fontFamily;
+}
 
-
+//global setting
 *, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -109,6 +114,8 @@ body {
     font-family: $fontFamily;
     background-color: $bgColor;
 }
+
+//website
 
 .container {
     margin: 0 auto;
@@ -127,7 +134,7 @@ body {
     background-color: $bgColor;
     
     &__logo {
-        color: $bgColorSecond;
+        color: $blueColor;
         font-size: 30px;
         font-weight: 800;
         margin: 10px 20px;
@@ -140,11 +147,11 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        background-color: $bgColorSecond;
+        background-color: $blueColor;
         background: linear-gradient(232deg, rgba(37,138,255,1) 50%, rgba(96,163,240,1) 100%);
         width: 70vw;
         height: 100vh;
-        border-right: 1px solid $bgColorSecond+(-10%);
+        border-right: 1px solid $blueColor+(-10%);
         
         transform: translateX(-71vw);
         transition: transform .4s ease-in;
@@ -183,10 +190,9 @@ body {
             transition: transform .3s ease-in;
         }
     }
-
 }
 
-    //button navigation mobile
+    // is a navigation element (button navigation mobile)
     .navbutton {
         margin: 0 20px;
         border: 0;
@@ -241,20 +247,22 @@ body {
         }
 
         &--active .navbutton__fill::before{
-            background-color: $altColor;
+            background-color: $greyColor;
             transform: translateY(-8px) rotate(45deg);
 
             transition: transform .3s ease-in;
         }
 
         &--active .navbutton__fill::after {
-            background-color: $altColor;
+            background-color: $greyColor;
             transform: translateY(8px) rotate(-45deg);
 
             transition: transform .3s ease-in;
         }
     }
+//end of navigation
 
+//start
 .start {
     min-height: 100vh;
     display: flex;
@@ -275,7 +283,7 @@ body {
     }
 
     &__subtitle {
-        @include subtitle($altColor);
+        @include subtitle($greyColor);
     }
 
     &__description {
@@ -283,14 +291,16 @@ body {
     }
 
     &__button {
-       @include buttonBlue;
+       @include button($blueColor);
     }
 }
+//end of start
 
+//simple
 .simple {
     padding: 40px 0;
     min-height: 600px;
-    background-color: $bgColorSecond;
+    background-color: $blueColor;
     background: linear-gradient(40deg, rgba(35,134,250,1) 60%, rgba(75,158,255,1) 100%);
     text-align: center;
     color: $bgColor;
@@ -333,7 +343,7 @@ body {
         @include description($bgColor+(-20%));
     }
 }
-
+    //is a simple element
 .info {
     &__item {
         display: grid;
@@ -370,9 +380,10 @@ body {
         color: $bgColor;
         font-weight: 500;
     }
-
 }
+//end of simple
 
+//code
 .code {
     margin: 0 auto;
     padding: 40px 0;
@@ -388,19 +399,19 @@ body {
     }
 
     &__subtitle {
-        @include subtitle($altColor);
+        @include subtitle($greyColor);
     }
 
     &__title {
         @include title;
-        color: $bgColorSecond;
+        color: $blueColor;
     }
 
     &__description {
         @include description($secondColor);
     }
 }
-
+    //is a code element
 .desc {
 
     &__item {
@@ -428,7 +439,7 @@ body {
         padding-bottom: 0;
         letter-spacing: 2px;
         font-weight: 800;
-        color:$bgColorSecond;
+        color:$blueColor;
     }
 
     &__info {
@@ -437,44 +448,102 @@ body {
         font-weight: 500;
     }
 }
+//end of code
 
+//pricing
 .pricing {
-    min-height: 600px;
-    background-color: $secondColor;
-    background: radial-gradient(circle, rgba(52,73,94,1) 0%, rgba(32,47,62,1) 100%);
+    background-color: #182e47;
     color: $secondColor;
     margin: 0 auto;
-    padding: 40px;
-
-    &__box {
-        background-color: $bgColor;
-        padding: 20px;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        border: 1px solid $bgColor+(-20%);
-        border-radius: 3px;
-    }
+    padding: 4% 6% 80px;
 
     &__header {
-        text-align: left;
+        margin: 30px auto 50px;
+        text-align: center;
+        color: $orangeColor;
+    }
+
+    &__subtitle {
+        @include subtitle($classicWhite);
+        margin: 0 auto 15px;
+        text-align: center;
+    }
+
+    &__title {
+        @include title;
+
+        color: #fc593b;
+    }
+}
+    //is a pricing element
+.offer {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 370px));
+    justify-content: center;
+    justify-self: center;
+    grid-gap: 2%;
+
+    &__box {
+        background-color: $classicWhite;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        border-radius: 3px;
+        padding: 30px;
+        color: $blackColor;
+    }
+
+
+    &__header {
         font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: $greyColor;
+
+        p {
+            margin:0;
+            padding:0;
+        }
     }
 
     &__price {
-        text-align: center;
+        align-self: center;
+        position: relative;
+
+        span {
+            font-size: 20px;
+            font-weight: 700;
+
+            //style for dolar
+            &:first-child {
+                position: absolute;
+                top: 0;
+                left: -15%;   
+            }
+
+            //style for text "/month"
+            &:last-child {
+                font-weight: 600;
+            }
+
+        }
     }
 
     &__description {
         text-align: justify;
         line-height: 150%;
+        font-size: 13px;
+        color: $greyColor;
     }
 
     &__list {
         @include listStyleReset;
-
-        line-height: 200%;
+        //left
+        line-height: 250%;
         margin: 20px 0;
+        font-size: 17px;
     }
 
     &__item {
@@ -482,14 +551,35 @@ body {
     }
 
     &__button {
-        @include buttonBlue;
+        //center
+        @include button($blueColor);
+        
     }
 
+    //active box
+    &__box--active {
+        background-color: #2b405a;
+        color: $classicWhite;
+
+        .offer__header, .offer__description {
+            color: #fff;
+        }
+
+        .offer__price {
+            color: #fff;
+        }
+
+        .offer__button {
+            align-self: left;
+            @include button($orangeColor);
+        }
+    }
 }
+//end of pricing
 
    
 
-
+//footer
 .footer {
     background: $bgColor;
     background: linear-gradient(332deg, rgba(227,238,248,1) 56%, rgba(255,255,255,1) 100%);
@@ -499,12 +589,12 @@ body {
     grid-template-columns: 1fr;
     grid-gap: 15px;
 }
-
+    //is a footer element
 .about {
     grid-area: 1 / 1 / 2 / 2;
 
     &__logo {
-        color: $bgColorSecond;
+        color: $blueColor;
         font-weight: 800;
         font-size: 40px;
         text-align: left;
@@ -529,7 +619,7 @@ body {
 
     &__header {
         font-weight: 800;
-        color: $primaryColor;
+        color: $blackColor;
         font-size: 24px;
         text-align: left;
     }
@@ -547,30 +637,30 @@ body {
         text-align: left;
 
         &:hover {
-            color: $altColor;
+            color: $greyColor;
         }
     }
 
     &__link {
-        color: $bgColorSecond;
+        color: $blueColor;
         font-weight: 500;
 
         &:before {
             content: "• "; 
-            color: $bgColorSecond;
+            color: $blueColor;
         }
 
         &:hover {
          cursor: pointer;
-         color: $altColor;
-         border-bottom: 1px solid $altColor;
+         color: $greyColor;
+         border-bottom: 1px solid $greyColor;
          font-weight: 500;
 
          transition: .3s ease-in;
 
          &::before {
             content: "> ";
-            color: $altColor;
+            color: $greyColor;
             font-weight: 500;
         }
         }
@@ -585,7 +675,7 @@ body {
   
     &__header {
         font-weight: 800;
-        color: $primaryColor;
+        color: $blackColor;
         font-size: 24px;
         text-align: left;
         display: none;
@@ -598,7 +688,7 @@ body {
         align-items: center;
         width: 50px;
         height: 50px;
-        background: $bgColorSecond;
+        background: $blueColor;
         border-radius: 50%;
         margin: 0 auto;
         cursor: pointer;
@@ -635,6 +725,19 @@ body {
             font-size: 400px;
         }
     }
+
+    .pricing__box {
+       // grid-template-columns: 2fr;
+       // grid-template-rows: 1fr;
+
+        &:first-child {
+          //  grid-column: 1 / 2;
+        }
+
+        &:last-child {
+           // grid-column: 2 / 3;
+        }
+    }
     
     //footer 
     .footer {
@@ -647,7 +750,7 @@ body {
 
         //first footer box
     .about {
-        grid-area: 1 / 1 / 2 / 2;
+       grid-area: 1 / 1 / 2 / 2;
 
         &__description {
             margin: 20px 10% 20px 0;
