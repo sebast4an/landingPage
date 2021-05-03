@@ -1,5 +1,5 @@
 # landingPage
-The project I create in my free time. [The current state is described below.](#currently)
+I create the project in my free time. [The current state is described below.](#currently)
 
 ## Project brief:
 Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM methodology. Only using CSS animation and clear JavaScript.
@@ -20,4 +20,4 @@ Preview 720p: [CLICK](https://raw.githubusercontent.com/sebast4an/landingPage/be
 * VanillaJS
 
 ## Currently:
-Finished 90% mobile view. Next debugging, refactoring and making view for big screen.
+It is preview version. I looking for bugs and make animation/transitions. Currently i finished transition for buttons and navigation mobile.
