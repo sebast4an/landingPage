@@ -4,8 +4,7 @@ I create the project in my free time. [The current state is described below.](#c
 ## Project brief:
 Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM methodology. Only using CSS animation and clear JavaScript.
 
-## Link 
-[CLICK and check!](https://sebast4an.github.io/landingPage/)
+## Link:
 https://sebast4an.github.io/landingPage/
 
 ## Use:
