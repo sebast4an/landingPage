@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,KAAK,EAGf,AAAD,eAAS,AAAC,CACN,MAAM,CAAE,KAAK,CAChB,AAEA,AAAD,cAAQ,AAAC,CACL,SAAS,CAAE,KAAK,CACnB",
+    "sources": [
+        "../scss/520px.scss"
+    ],
+    "names": [],
+    "file": "520px.css"
+}

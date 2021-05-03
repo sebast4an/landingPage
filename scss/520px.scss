@@ -1,0 +1,13 @@
+@media (min-width: 520px) {
+    
+    .simple {
+        &__figure {
+            height: 480px;
+        }
+
+        &__phone {
+            font-size: 350px;
+        }
+    }
+
+}

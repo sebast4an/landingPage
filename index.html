@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Landing Page</title>
 
-    <!-- CURRENT VERSION IS BETA! I am works!. -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fontello.css">
 </head>
 <body>
 <div class="container">
-    
     <nav class="navigation">
         <h1 class="navigation__logo">
             LOGO
@@ -54,81 +52,87 @@
                 Read more
             </button>
         </header>
+        <div class="start__box box">
+            <section class="box__item">
+                <i class="box__icon icon-pencil"></i>
+                <header class="box__header">Bem methodology</header>
+                <article class="box__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem impedit voluptatem consequatur recusandae.
+                </article>
+            </section>
+           <section class="box__item">
+                <i class="box__icon icon-rwd"></i>
+                <header class="box__header">100% Responsive!</header>
+                <article class="box__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem impedit voluptatem consequatur recusandae.
+                </article>
+            </section>
+            <section class="box__item">
+                <i class="box__icon icon-code"></i>
+                <header class="box__header">Grid & Flexbox</header>
+                <article class="box__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem impedit voluptatem consequatur recusandae.
+                </article>
+            </section>   
+        </div>
     </section>
+
     <article class="container__item simple">
         <figure class="simple__figure">
             <i class="simple__phone icon-mobile"></i>
         </figure>
-        <header class="simple__header">
-            <p class="simple__subtitle">
+        <header class="simple__header header">
+            <p class="header__subtitle">
                 Responsive web design
             </p>
-            <h1 class="simple__title">
+            <h1 class="header__title">
                 Website scaled to every device
             </h1>
-            <p class="simple__description ">
-                HTML5 sematic. Preprocessor SCSS. BEM metodology. RWD: CSS Grid & Flexbox. Fontello font.
+            <p class="header__description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam nihil cumque et explicabo excepturi, voluptatum a alias suscipit distinctio repellendus quisquam voluptatem tempora eius quo, iure illo facilis laborum id.
             </p>
         </header>
-        <div class="simple__info info">
-            <section class="info__item">
-                <i class="info__icon icon-pencil"></i>
-                <header class="info__header">Easy to use!</header>
-                <article class="info__info">
-                    Aliquid temporibus quos minus consectetur impedit aliquam modi amet voluptatem repudiandae vero,
-                </article>
-            </section>
-           <section class="info__item">
-                <i class="info__icon icon-rwd"></i>
-                <header class="info__header">100% Responsive!</header>
-                <article class="info__info">
-                    Enim velit laboriosam consequuntur tenetur? Odit dicta magnam deserunt est.
-                </article>
-            </section>
-            <section class="info__item">
-                <i class="info__icon icon-code"></i>
-                <header class="info__header">CSS Grid & Flexbox</header>
-                <article class="info__info">
-                    Rerum earum corrupti repellendus repudiandae soluta vitae, deserunt fuga esse!
-                </article>
-            </section>   
-        </div>
     </article>
 
     <aside class="container__item code">
         <figure class="code__figure">
             <i class="code__page icon-landingpage"></i>
         </figure>
-        <header class="code__header">
-            <p class="code__subtitle">
+        <header class="code__header header">
+            <p class="header__subtitle">
                 Free for everyone
             </p>
-            <h1 class="code__title">
+            <h1 class="header__title">
                 Only code
             </h1>
-            <p class="code__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut saepe vitae vel tempora, veniam nemo illum.
+            <p class="header__description">
+                <span class="header__description--short">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut saepe vitae vel tempora, veniam nemo illum.
+                </span>
+                <span class="header__description--long">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut saepe vitae vel tempora, veniam nemo illum. Perferendis voluptas praesentium molestias impedit quo veritatis. Soluta illo molestiae nisi et voluptatibus, mollitia aperiam ea voluptate, recusandae reprehenderit eveniet! Reprehenderit, deleniti?
+                </span>
             </p>
         </header>
-        <div class="code__info desc">
-            <section class="desc__item">
-                <i class="desc__icon icon-html5"></i>
-                <header class="desc__header">Using:</header>
-                <article class="desc__info">
+        <div class="code__info box">
+            <section class="box__item">
+                <i class="box__icon icon-html5"></i>
+                <header class="box__header">Using:</header>
+                <article class="box__description">
                     HTML5 sematic. Preprocessor SCSS. CSS Grid & Flexbox. BEM metodology. Fontello font.
                 </article>
             </section>
-           <section class="desc__item">
-                <i class="desc__icon icon-set"></i>
-                <header class="desc__header">BEM metodology</header>
-                <article class="desc__info">
+           <section class="box__item">
+                <i class="box__icon icon-set"></i>
+                <header class="box__header">BEM metodology</header>
+                <article class="box__description">
                     Enim velit laboriosam consequuntur tenetur? Odit dicta magnam deserunt est.
                 </article>
             </section>
-            <section class="desc__item">
-                <i class="desc__icon icon-github"></i>
-                <header class="desc__header">Free for everyone</header>
-                <article class="desc__info">
+            <section class="box__item">
+                <i class="box__icon icon-github"></i>
+                <header class="box__header">Free for everyone</header>
+                <article class="box__description">
                     Rerum earum corrupti repellendus repudiandae soluta vitae, deserunt fuga esse!
                 </article>
             </section>   
@@ -144,10 +148,9 @@
                 Choose options for you!
             </h1>
         </header>
-
         <section class="offer">
-        <!-- first -->
-           <article class="offer__box offer__box--active">
+        <!-- first offer box -->
+            <article class="offer__box offer__box--active">
                 <header class="offer__header">
                     <p>Basic</p>
                 </header>
@@ -175,8 +178,7 @@
                     Start
                 </button>
             </article>
-
-        <!-- second -->
+        <!-- second offer box -->
             <article class="offer__box">
                 <header class="offer__header">
                     <p>Regular</p>
@@ -208,7 +210,7 @@
         </section>
     </main>
 
-    <footer class="container__item footer">
+    <footer class="footer">
         <section class="footer__box about">
             <header class="about__logo">
                 LOGO
@@ -217,7 +219,6 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolorum ullam magnam repellendus consectetur harum, omnis iure tempora magni vero nobis iusto earum aliquam excepturi dolorem voluptates accusamus sapiente adipisci?
             </article>
         </section>
-
         <section class="footer__box navfooter">
             <header class="navfooter__header">
                 Navigation:
@@ -237,7 +238,6 @@
                 </li>
             </ul>
         </section>
-
         <section class="footer__box social">
             <header class="social__header">
                 Follow me:
@@ -264,7 +264,6 @@
             </a>
         </section>
     </footer>
-
 </div>
 
 <script src="js/index.js" defer></script>

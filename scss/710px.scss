@@ -1,0 +1,130 @@
+@media (min-width:710px) {
+
+    .container__item {
+        padding: 20px 8%;
+    }
+
+    .start {    
+        .box {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px 0;
+
+            &__item {
+                margin: 20px;
+            }
+        
+            &__icon {
+                grid-area: 1 / 1 / 2 / 2;
+
+                justify-content: center;
+                font-size: 75px;        
+            }
+        
+            &__header {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+        
+            &__description {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+        }
+}
+
+
+    .simple {
+        &__figure{
+            height: 380px;
+        }
+
+        &__phone {
+            font-size: 380px;
+        }
+    }
+
+    .code {
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            &__item {
+                margin: 20px;
+            }
+
+            &__icon {
+                grid-area: 1 / 1 / 2 / 2;
+
+                justify-content: center;
+            }
+
+            &__header {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            &__description {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+        }
+    }
+    
+    //footer 
+    .footer {
+        grid-template-rows: auto;
+        grid-template-columns: 45% 27% 27%;
+        padding: 4% 7%;
+
+        //first footer box
+        .about {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+    
+        //second footer box
+        .navfooter {
+            grid-area: 1 / 2 / 2 / 3;
+            align-items: center;
+        }
+    
+            // third footer box
+        .social {
+            grid-area: 1 / 3 / 2 / 4;
+
+            display: grid; //before is it flexbox
+            grid-template-rows: 20% 40% 40%;
+            grid-template-columns: auto;
+            justify-items: center;
+    
+            &__header {
+                grid-area: 1 / 1 / 2 / 3;
+
+                display: block;
+            }
+    
+            &__figure {
+                margin: 0 auto;
+            }
+    
+            &__icon {
+                font-size: 22px;
+            }
+    
+            &__fb {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+    
+            &__tw {
+                grid-area: 2 / 2 / 3 / 3;
+            }
+    
+            &__insta {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+    
+            &__mail {
+                grid-area: 3 / 2 / 4 / 3;
+            }
+        }
+    }
+}
