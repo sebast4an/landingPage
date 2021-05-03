@@ -16,6 +16,12 @@
             transition: none;
             margin: 10px 30px;
             border: 0;
+
+            &--active {
+                box-shadow: none; 
+                //why? if someone clicked the navbutton and then extended the browser window - they would see for the unwanted shadow
+            }
+
         }
 
         &__item {
@@ -32,10 +38,11 @@
             font-size: 20px;
             color: $secondColor;
 
-            &:hover {
-                font-weight: 600;
-                position: relative;              
+            &::before {
+                border-bottom: 2px solid $secondColor;
+
             }
+
         }
 
     }
