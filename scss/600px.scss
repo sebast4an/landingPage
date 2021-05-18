@@ -6,6 +6,8 @@
     }
 
     .navigation {
+        border-bottom: 1px solid #167bf02e;
+
         &__list {
             background: none;
             position: relative;
@@ -27,23 +29,44 @@
         &__item {
             display: inline-block;
             padding: 0;
-            margin: 0 10px;
+            margin: 0 12px;
+            overflow: unset;
 
             &:first-child {
-                margin: 0 10px;
+                margin: 0 12px;
             }
         }
 
         &__link {
             font-size: 20px;
             color: $secondColor;
+            transition: color .3s ease-in-out;
 
             &::before {
-                border-bottom: 2px solid $secondColor;
-
+                opacity: 0;
+                width: 100%;
+                left: 0;
+                top: 17px;
+                border-bottom: 2px solid $blueColor;
+    
+                transition: opacity .4s ease-in-out;
             }
 
+            &:hover, &--active {
+                color: $blueColor;
+                
+                &::before {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+
+            &:target {
+                color: red;
+            }
         }
 
     }
 }
+
+
