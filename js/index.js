@@ -14,7 +14,7 @@ const setCountedWidthNavItem = () => {
     mainNavigation.forEach(link => {
         link.style.width = ""; //resetting the static width before counting
         link.style.fontWeight = "600";
-        const value = (link.offsetWidth)+(link.offsetWidth/10);
+        const value = (link.offsetWidth) + (link.offsetWidth / 10);
         link.style.width = `${value.toFixed()}px`;
         link.style.fontWeight = "";
     });
