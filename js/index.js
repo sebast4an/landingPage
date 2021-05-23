@@ -25,22 +25,25 @@ window.addEventListener(`resize`, () => {
 });
 
 
-//activation of the navigation link while scrolling
+//Activates the current nav based on scroll position
 const activeLinkWhileScroll = () => {
-    const navLinks = document.querySelectorAll(".navigation__link");
+    let mainNavLinks = document.querySelectorAll(".navigation__link");
+    //by default start is active
+    mainNavLinks[0].classList.add("navigation__link--active");
 
-    window.addEventListener("scroll", event => {
-        const fromTop = window.scrollY;
+    window.addEventListener("scroll", () => {
+      let fromTop = window.scrollY;
+    
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+    
+        if (section.offsetTop-2 <= fromTop && section.offsetTop + section.offsetHeight-2 > fromTop) {
+          link.classList.add("navigation__link--active");
+        } else {
+          link.classList.remove("navigation__link--active");
+        }
+      });
 
-        navLinks.forEach(link => {
-            let section = document.querySelector(link.hash);
-
-            if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-                link.classList.add("navigation__link--active");
-            } else {
-                link.classList.remove("navigation__link--active");
-            }
-        });
     });
 }; activeLinkWhileScroll();
 

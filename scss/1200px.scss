@@ -1,0 +1,27 @@
+@media (min-width: 1200px) {
+    
+    .start {
+        @include boxAnotherGrid();
+
+        .box {
+            margin: 60px 0 0 0;
+        }
+    }
+
+    .simple {
+        grid-template-columns: 30% 60%;
+
+        &__phone {
+            font-size: 450px;
+        }
+    }
+
+    .code {
+        @include boxAnotherGrid();
+    }
+
+    .footer {
+        grid-template-columns: 40% 20% 20%;
+        padding: 3% 12%;
+    }
+}

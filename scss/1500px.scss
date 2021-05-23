@@ -1,0 +1,14 @@
+@media (min-width: 1500px) {
+    .container__item {
+        padding: 20px 14%;
+    }
+
+    .simple {
+        .header {
+            &__subtitle,
+            &__description {
+                margin: 40px 0;
+            }
+        }
+    }
+}

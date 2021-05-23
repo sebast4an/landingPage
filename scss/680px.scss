@@ -1,4 +1,4 @@
-@media (min-width: 600px) {
+@media (min-width: 680px) {
     
     //navigation
     .navbutton {
@@ -23,7 +23,6 @@
                 box-shadow: none; 
                 //why? if someone clicked the navbutton and then extended the browser window - they would see for the unwanted shadow
             }
-
         }
 
         &__item {
@@ -48,7 +47,7 @@
                 left: 0;
                 top: 17px;
                 border-bottom: 2px solid $blueColor;
-    
+                
                 transition: opacity .4s ease-in-out;
             }
 
