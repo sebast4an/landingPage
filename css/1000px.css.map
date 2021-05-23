@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,MAAM,EAEhB,AAAD,cAAQ,AAAC,CACL,SAAS,CAAE,KAAK,CACnB",
+    "sources": [
+        "../scss/1000px.scss"
+    ],
+    "names": [],
+    "file": "1000px.css"
+}

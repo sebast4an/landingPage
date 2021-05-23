@@ -23,21 +23,24 @@
         </button>
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a class="navigation__link" href="#">Simple</a>
+                <a class="navigation__link" href="#start">Start</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" href="#">Code</a>
+                <a class="navigation__link" href="#simple">Simple</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" href="#">Pricing</a>
+                <a class="navigation__link" href="#code">Code</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" href="#">Footer</a>
+                <a class="navigation__link" href="#pricing">Pricing</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#footer">Footer</a>
             </li>
         </ul>
     </nav>
 
-    <section class="container__item start">
+    <section class="container__item start container__part" id="start">
         <header class="start__header">
             <p class="start__subtitle">
                 Easy to use
@@ -46,11 +49,13 @@
                 Responsive Landing Page
             </h1>
             <p class="start__description">
-                It is a simple responsive template. I created it using: SCCS, vanillaJS and fontello font. RWD: Grid & Flexbox.
+                It is a simple responsive website template. I created it compliant with the rules DRY, mobile first and BEM methodology, Using SCSS and clear JavaScript.
             </p>
-            <button class="start__button" type="button">
-                Read more
-            </button>
+            <form>
+                <button class="start__button" type="submit" formaction="#simple">
+                    Read more
+                </button>
+            </form>
         </header>
         <div class="start__box box">
             <section class="box__item">
@@ -69,7 +74,7 @@
             </section>
             <section class="box__item">
                 <i class="box__icon icon-code"></i>
-                <header class="box__header">Grid & Flexbox</header>
+                <header class="box__header">CSS preprocessor</header>
                 <article class="box__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem impedit voluptatem consequatur recusandae.
                 </article>
@@ -77,7 +82,7 @@
         </div>
     </section>
 
-    <article class="container__item simple">
+    <article class="container__item simple container__part" id="simple">
         <figure class="simple__figure">
             <i class="simple__phone icon-mobile"></i>
         </figure>
@@ -94,7 +99,7 @@
         </header>
     </article>
 
-    <aside class="container__item code">
+    <aside class="container__item code container__part" id="code">
         <figure class="code__figure">
             <i class="code__page icon-landingpage"></i>
         </figure>
@@ -119,7 +124,7 @@
                 <i class="box__icon icon-html5"></i>
                 <header class="box__header">Using:</header>
                 <article class="box__description">
-                    HTML5 sematic. Preprocessor SCSS. CSS Grid & Flexbox. BEM metodology. Fontello font.
+                    HTML5 semantic. Preprocesor SASS. CSS Grid and Flexbox. DRY, BEM methodology. Fontello font.
                 </article>
             </section>
            <section class="box__item">
@@ -139,7 +144,7 @@
         </div>
     </aside>
 
-    <main class="pricing">
+    <main class="pricing container__part" id="pricing">
         <header class="pricing__header">
             <p class="pricing__subtitle">
                 Available options
@@ -160,18 +165,22 @@
                 <section class="offer__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, at! Odit, excepturi.
                 </section>
-                <ul class="offer__list">
-                    <li class="offer__item">
-                        HTML5 semanitc
+                <ul class="offer__list list">
+                    <li class="list__item">
+                        <i class="list__icon icon-ok"></i>
+                        HTML5 semantic
                     </li>
-                    <li class="offer__item">
+                    <li class="list__item">
+                        <i class="list__icon icon-ok"></i>
                         BEM metodology
                     </li>
-                    <li class="offer__item">
-                        SCSS preprocessor
+                    <li class="list__item list__item--inactive">
+                        <i class="icon-cancel"></i>
+                        CSS preprocessor
                     </li>
-                    <li class="offer__item">
-                        CSS Grid & Flexbox
+                    <li class="list__item list__item--inactive">
+                        <i class="icon-cancel"></i>
+                        Clear JavaScript
                     </li>
                 </ul>
                 <button type="button" class="offer__button">
@@ -189,18 +198,22 @@
                 <section class="offer__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, at! Odit, excepturi.
                 </section>
-                <ul class="offer__list">
-                    <li class="offer__item">
-                        HTML5 semanitc
+                <ul class="offer__list list">
+                    <li class="list__item">
+                        <i class="list__icon icon-ok"></i>
+                        HTML5 semantic
                     </li>
-                    <li class="offer__item">
+                    <li class="list__item">
+                        <i class="list__icon icon-ok"></i>
                         BEM metodology
                     </li>
-                    <li class="offer__item">
-                        SCSS preprocessor
+                    <li class="list__item">
+                        <i class="list__icon icon-ok"></i>
+                        CSS preprocessor
                     </li>
-                    <li class="offer__item">
-                        CSS Grid & Flexbox
+                    <li class="list__item">
+                        <i class="list__icon icon-ok"></i>
+                        Clear JavaScript
                     </li>
                 </ul>
                 <button type="button" class="offer__button">
@@ -210,7 +223,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer container__part" id="footer">
         <section class="footer__box about">
             <header class="about__logo">
                 LOGO

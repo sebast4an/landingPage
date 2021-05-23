@@ -11,12 +11,12 @@ https://sebast4an.github.io/landingPage/
 * HTML5 semantics
 * DRY, BEM methodology
 * preprocesor SASS (SCSS)
+* clear JavaScript (ES6)
 * CSS Grid & Flexbox
 * Media queries
 * [normalize.css](https://github.com/necolas/normalize.css)
 * Fontello font
 * Google fonts
-* VanillaJS
 
 ## Currently:
-It is preview version - [CLICK](https://sebast4an.github.io/landingPage/). I looking for bugs and make animation/transitions. Currently i finished transition for buttons and navigation mobile.
+It is preview version - [CLICK](https://sebast4an.github.io/landingPage/). I looking for bugs.

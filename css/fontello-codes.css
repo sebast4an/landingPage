@@ -3,6 +3,8 @@
 .icon-pencil:before { content: '\e801'; } /* '' */
 .icon-rwd:before { content: '\e802'; } /* '' */
 .icon-landingpage:before { content: '\e803'; } /* '' */
+.icon-ok:before { content: '\e804'; } /* '' */
+.icon-cancel:before { content: '\e805'; } /* '' */
 .icon-mobile:before { content: '\f034'; } /* '' */
 .icon-github:before { content: '\f056'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
