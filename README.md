@@ -1,4 +1,4 @@
-# landingPage
+# :hash: landingPage
 It is simply landing page. [The current state is described below.](#currently)
 
 ## Project brief:
