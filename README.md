@@ -1,5 +1,5 @@
 # landingPage
-I create the project in my free time. [The current state is described below.](#currently)
+It is simply landing page. [The current state is described below.](#currently)
 
 ## Project brief:
 Simple, lightweight project. Compliant with the rules DRY, mobile first and BEM methodology. Only using CSS animation and clear JavaScript.
@@ -15,8 +15,8 @@ https://sebast4an.github.io/landingPage/
 * CSS Grid & Flexbox
 * Media queries
 * [normalize.css](https://github.com/necolas/normalize.css)
-* Fontello font
 * Google fonts
 
 ## Currently:
-It is preview version - [CLICK](https://sebast4an.github.io/landingPage/). I looking for bugs.
+This project have a one big problem in my opinion: fontello fonts. **I am ashamed of this because i should use SVG**. In the future if when i have free time - i change this :) 
+It is preview - [CLICK](https://sebast4an.github.io/landingPage/).
