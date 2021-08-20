@@ -19,4 +19,4 @@ https://sebast4an.github.io/landingPage/
 
 ## Currently:
 This project has one big problem in my opinion: fontello fonts. **I am ashamed of this because I should use SVG**. In the future when I have free time - I will change this :) 
-It is preview - [CLICK](https://sebast4an.github.io/landingPage/).
+[It is preview](https://sebast4an.github.io/landingPage/).
